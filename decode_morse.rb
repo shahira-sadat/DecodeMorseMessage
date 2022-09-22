@@ -11,4 +11,9 @@ def decode_char(char)
   morse_dict.key(char)
 end
 
-
+def decode_word(word)
+  array = word.split
+  english = []
+  array.each { |letter| english.insert(english.length, decode_char(letter)) }
+  english.join
+end
