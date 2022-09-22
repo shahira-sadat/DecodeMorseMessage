@@ -17,3 +17,12 @@ def decode_word(word)
   array.each { |letter| english.insert(english.length, decode_char(letter)) }
   english.join
 end
+
+def decode_msg(msg)
+  array = msg.split('   ')
+  english = []
+  array.each { |word| english.insert(english.length, decode_word(word)) }
+  english.join(' ')
+end
+
+print decode_msg('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
